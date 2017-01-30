@@ -43,7 +43,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     },
     resolve :{
       menuItems: ['MenuDataService','$stateParams','items', function (MenuDataService,$stateParams,items) {
-         var categoryShortName = items[$stateParams.categoryShortNameIndex];
+         var categoryShortName = items[$stateParams.categoryShortNameIndex].short_name;
          console.log("The fucking thing",categoryShortName);
          console.log("stateParams",$stateParams);
         console.log("looool",$stateParams.categoryShortNameIndex);
